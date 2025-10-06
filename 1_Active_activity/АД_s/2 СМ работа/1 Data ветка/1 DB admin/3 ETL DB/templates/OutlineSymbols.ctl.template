@@ -1,0 +1,18 @@
+options (skip=1)
+
+-- Block for table: OutlineSymbols
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/OutlineSymbols.csv'
+badfile 'OutlineSymbols.bad'
+discardfile 'OutlineSymbols.dis'
+append
+into table "OutlineSymbols"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "Entry" CHAR(255),
+  "OutlineNumber" INTEGER EXTERNAL,
+  "ViewNumber" INTEGER EXTERNAL,
+  "Symbol" CHAR(255)
+)

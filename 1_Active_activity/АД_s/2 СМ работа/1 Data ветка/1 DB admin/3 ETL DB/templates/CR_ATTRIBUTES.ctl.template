@@ -1,0 +1,18 @@
+options (skip=1)
+
+-- Block for table: CR_ATTRIBUTES
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/CR_ATTRIBUTES.csv'
+badfile 'CR_ATTRIBUTES.bad'
+discardfile 'CR_ATTRIBUTES.dis'
+append
+into table "CR_ATTRIBUTES"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "CRIMPING_RULES_GUID" CHAR(36),
+  "NAME" CHAR(255),
+  "COPY" INTEGER EXTERNAL,
+  "VALUE" CHAR(255)
+)

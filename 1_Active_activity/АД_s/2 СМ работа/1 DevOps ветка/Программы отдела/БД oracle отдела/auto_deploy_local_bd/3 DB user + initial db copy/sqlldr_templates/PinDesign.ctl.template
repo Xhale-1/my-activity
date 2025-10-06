@@ -1,0 +1,18 @@
+options (skip=1)
+
+-- Block for table: PinDesign
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/PinDesign.csv'
+badfile 'PinDesign.bad'
+discardfile 'PinDesign.dis'
+append
+into table "PinDesign"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "Entry" CHAR(20),
+  "Copy" INTEGER EXTERNAL,
+  "TechnologyID" INTEGER EXTERNAL,
+  "PadStackID" INTEGER EXTERNAL
+)

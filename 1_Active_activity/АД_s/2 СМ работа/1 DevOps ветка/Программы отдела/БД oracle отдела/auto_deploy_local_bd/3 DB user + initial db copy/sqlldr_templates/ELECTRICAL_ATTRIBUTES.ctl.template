@@ -1,0 +1,17 @@
+options (skip=1)
+
+-- Block for table: ELECTRICAL_ATTRIBUTES
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/ELECTRICAL_ATTRIBUTES.csv'
+badfile 'ELECTRICAL_ATTRIBUTES.bad'
+discardfile 'ELECTRICAL_ATTRIBUTES.dis'
+append
+into table "ELECTRICAL_ATTRIBUTES"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "WIREKIND_ID" INTEGER EXTERNAL,
+  "RELATIVE_PERMITTIVITY" CHAR(2000),
+  "LOSS_ANGLE" CHAR(2000)
+)

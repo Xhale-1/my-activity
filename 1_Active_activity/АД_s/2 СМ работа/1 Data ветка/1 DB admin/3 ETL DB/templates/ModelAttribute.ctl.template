@@ -1,0 +1,19 @@
+options (skip=1)
+
+-- Block for table: ModelAttribute
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/ModelAttribute.csv'
+badfile 'ModelAttribute.bad'
+discardfile 'ModelAttribute.dis'
+append
+into table "ModelAttribute"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "ID" CHAR(40),
+  "Entry" CHAR(255),
+  "AttributeName" CHAR(80),
+  "Copy" INTEGER EXTERNAL,
+  "AttributeValue" CHAR(255)
+)

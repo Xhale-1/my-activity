@@ -1,0 +1,21 @@
+options (skip=1)
+
+-- Block for table: SYMBOL_STATES
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/SYMBOL_STATES.csv'
+badfile 'SYMBOL_STATES.bad'
+discardfile 'SYMBOL_STATES.dis'
+append
+into table "SYMBOL_STATES"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "ID" CHAR(36),
+  "NAME" CHAR(255),
+  "SYMBOL_ID" CHAR(36),
+  "FU_STATE_ID" CHAR(36),
+  "FUSUBID" INTEGER EXTERNAL,
+  "ORDER_NUM" INTEGER EXTERNAL,
+  "FLAGS" INTEGER EXTERNAL
+)

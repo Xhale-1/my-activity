@@ -1,0 +1,19 @@
+options (skip=1)
+
+-- Block for table: BlockedInfos
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/BlockedInfos.csv'
+badfile 'BlockedInfos.bad'
+discardfile 'BlockedInfos.dis'
+append
+into table "BlockedInfos"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "ENTRY" CHAR(255),
+  "VERSION" CHAR(4),
+  "RootEntry" CHAR(255),
+  BlockedPins_HEX FILLER CHAR(8000000),
+  "BlockedPins" EXPRESSION "HEXTORAW(:BlockedPins_HEX)"
+)

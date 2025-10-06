@@ -1,0 +1,22 @@
+options (skip=1)
+
+-- Block for table: IEC 750 letter codes
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/IEC 750 letter codes.csv'
+badfile 'IEC 750 letter codes.bad'
+discardfile 'IEC 750 letter codes.dis'
+append
+into table "IEC 750 letter codes"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "ID" INTEGER EXTERNAL,
+  "LetterCode" CHAR(255),
+  "ValueRange" CHAR(255),
+  "Class" CHAR(255),
+  "Klasse" CHAR(255),
+  "Classe" CHAR(255),
+  "Clase" CHAR(255),
+  "Eeann" CHAR(256)
+)

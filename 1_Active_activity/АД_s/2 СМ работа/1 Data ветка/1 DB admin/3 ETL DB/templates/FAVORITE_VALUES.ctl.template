@@ -1,0 +1,20 @@
+options (skip=1)
+
+-- Block for table: FAVORITE_VALUES
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/FAVORITE_VALUES.csv'
+badfile 'FAVORITE_VALUES.bad'
+discardfile 'FAVORITE_VALUES.dis'
+append
+into table "FAVORITE_VALUES"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "ID" INTEGER EXTERNAL,
+  "COPY" INTEGER EXTERNAL,
+  "DBFIELD" CHAR(255),
+  "DESCRIPTION" CHAR(255),
+  "VALUE" CHAR(255),
+  "FLAGS" INTEGER EXTERNAL
+)

@@ -1,0 +1,35 @@
+options (skip=1)
+
+-- Block for table: SymbolText
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/SymbolText.csv'
+badfile 'SymbolText.bad'
+discardfile 'SymbolText.dis'
+append
+into table "SymbolText"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "ENTRY" CHAR(255),
+  "COPY" INTEGER EXTERNAL,
+  "TTYPE" INTEGER EXTERNAL,
+  "TX" CHAR(2000),
+  "TY" CHAR(2000),
+  "TJUST" INTEGER EXTERNAL,
+  "THT" CHAR(2000),
+  "TMOD" INTEGER EXTERNAL,
+  "TLEV" INTEGER EXTERNAL,
+  "TSTR" CHAR(255),
+  "LBNNUM" INTEGER EXTERNAL,
+  "Flags" INTEGER EXTERNAL,
+  "TROT" CHAR(2000),
+  "FontName" CHAR(255),
+  "FontStyle" INTEGER EXTERNAL,
+  "TextColor" INTEGER EXTERNAL,
+  "Flags2" INTEGER EXTERNAL,
+  "SIZEX" CHAR(2000),
+  "SIZEY" CHAR(2000),
+  "Hyperlink" CHAR(255),
+  "SOURCE" INTEGER EXTERNAL
+)

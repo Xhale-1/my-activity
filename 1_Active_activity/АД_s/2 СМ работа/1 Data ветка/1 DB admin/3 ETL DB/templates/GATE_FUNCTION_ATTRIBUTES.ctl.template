@@ -1,0 +1,21 @@
+options (skip=1)
+
+-- Block for table: GATE_FUNCTION_ATTRIBUTES
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/GATE_FUNCTION_ATTRIBUTES.csv'
+badfile 'GATE_FUNCTION_ATTRIBUTES.bad'
+discardfile 'GATE_FUNCTION_ATTRIBUTES.dis'
+append
+into table "GATE_FUNCTION_ATTRIBUTES"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "LPNTR" CHAR(255),
+  "GateNumber" INTEGER EXTERNAL,
+  "FUSUBID" INTEGER EXTERNAL,
+  "STATE_ID" CHAR(36),
+  "AttributeName" CHAR(80),
+  "Copy" INTEGER EXTERNAL,
+  "AttributeValue" CHAR(255)
+)

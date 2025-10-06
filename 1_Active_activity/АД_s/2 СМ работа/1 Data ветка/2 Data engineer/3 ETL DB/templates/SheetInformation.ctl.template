@@ -1,0 +1,25 @@
+options (skip=1)
+
+-- Block for table: SheetInformation
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/SheetInformation.csv'
+badfile 'SheetInformation.bad'
+discardfile 'SheetInformation.dis'
+append
+into table "SheetInformation"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "ENTRY" CHAR(255),
+  "SheetType" INTEGER EXTERNAL,
+  "LayoutType" INTEGER EXTERNAL,
+  HorzLayout_HEX FILLER CHAR(8000000),
+  "HorzLayout" EXPRESSION "HEXTORAW(:HorzLayout_HEX)",
+  VertLayout_HEX FILLER CHAR(8000000),
+  "VertLayout" EXPRESSION "HEXTORAW(:VertLayout_HEX)",
+  "Orientation" CHAR(12),
+  DrawingArea_HEX FILLER CHAR(8000000),
+  "DrawingArea" EXPRESSION "HEXTORAW(:DrawingArea_HEX)",
+  "PRINT_AREA" RAW
+)

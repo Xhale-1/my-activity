@@ -1,0 +1,19 @@
+options (skip=1)
+
+-- Block for table: DatabaseTree
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/DatabaseTree.csv'
+badfile 'DatabaseTree.bad'
+discardfile 'DatabaseTree.dis'
+append
+into table "DatabaseTree"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "Structure" CHAR(255),
+  Data_HEX FILLER CHAR(8000000),
+  "Data" EXPRESSION "HEXTORAW(:Data_HEX)",
+  "TreeType" INTEGER EXTERNAL,
+  "Active" INTEGER EXTERNAL
+)

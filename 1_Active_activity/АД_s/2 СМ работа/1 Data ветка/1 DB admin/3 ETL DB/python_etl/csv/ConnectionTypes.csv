@@ -1,0 +1,27 @@
+ConnectionType,Flags,DESCRIPTION_86,DESCRIPTION_31,DESCRIPTION_44,DESCRIPTION_33,DESCRIPTION_49,DESCRIPTION_39,DESCRIPTION_81,DESCRIPTION_351,DESCRIPTION_07,DESCRIPTION_34,DESCRIPTION_90,DESCRIPTION_48
+-32,1,笼式夹持 Siemens Sirius RH,CageClamp Siemens Sirius RH,CageClamp Siemens Sirius RH,CageClamp Siemens Sirius RH,CageClamp Siemens Sirius RH,CageClamp Siemens Sirius RH,ケージクランプ Siemens Sirius RH,GaiolaMola Siemens Sirius RH,CageClamp Siemens Sirius RH,Abrazadera para caja Siemens Sirius RH,Kıskaçlı Terminal Siemens Sirius RH,CageClamp Siemens Sirius RH
+-31,1,笼式夹持 Siemens Sirius RT,CageClamp Siemens Sirius RT,CageClamp Siemens Sirius RT,CageClamp Siemens Sirius RT,CageClamp Siemens Sirius RT,CageClamp Siemens Sirius RT,ケージクランプ Siemens Sirius RT,GaiolaMola Siemens Sirius RT,CageClamp Siemens Sirius RT,Abrazadera para caja Siemens Sirius RT,Kıskaçlı Terminal  Siemens Sirius RT,CageClamp Siemens Sirius RT
+-10,1,笼式夹持 WAGO BR280,CageClamp WAGO BR280,CageClamp WAGO BR280,CageClamp WAGO BR280,CageClamp WAGO BR280,CageClamp WAGO BR280,ケージクランプWAGO BR280,GaiolaMola WAGO BR280,CageClamp WAGO BR280,Abrazadera para caja WAGO BR280,Kıskaçlı Terminal  WAGO BR280,CageClamp WAGO BR280
+0,0,未知,<onbekend>,<Unknown>,<Inconnu>,<Unbekannt>,<Sconosciuto>,<不明>,<desconhecido>,<нет данных>,<desconocido>,<bilinmeyen>,<Nieznany>
+1,0,螺钉,geschroefd,screwed,vissé,geschraubt,a vite,ねじ留め,Parafusado,резьбовое соединение,Roscado,vidalı,przykręcany
+2,0,夹接,geklemd,clamped,serré,geklemmt,a morsetto,クランプ留め,A Mola,соединение с фиксацией,Fijado,kıskaç,zacisk sprężynowy
+3,0,焊接,gesoldeerd,soldered,soudé,gelötet,saldato,半田留め,Soldado,соединение пайкой,Soldado,lehimli,lutowany
+4,0,压接,gekrompen,crimped,rabattu,gecrimpt,crimpato,クリンプ留め,Crimpado,обжимное соединение,Crimpado,kıvrılmış,zaciskany
+5,0,笼式夹持 常规,CageClamp allgemeen,CageClamp general,CageClamp général,CageClamp allgemein,CageClamp generico,ケージクランプ一般,Gaiola-Mola Geral,CageClamp general,Abrazadera para caja,genel Kıskaçlı Terminal ,CageClamp główny
+6,0,夹片 KH,klem stuk KH,Clamping piece KH,Serre-cosse KH,Klemmhülse KH,terminalino KH,クランプ部分 KH,Peça de Fixação KH,зажим типа KH,Clamping piece KH,Kıskaçlı parça KH,Zacisk sprężynowy KH
+7,0,Vice AS,bankschroef,Vice AS,Jeu de vis AS,Schraubsatz AS,vite AS,Vice AS,Vice AS,винт типа AS,Vice AS,Yardımcı AS,Zaciskany AS
+8,0,FBST 500/PLc x,FBST 500-PLC x,FBST 500/PLc x,FBST 500-PLC x,FBST 500-PLC x,FBST 500-PLC x,FBST 500/PLc x,FBST 500-PLC x,FBST 500/PLc x,FBST 500-PLC x,FBST 500-PLC x,FBST 500/PLc x
+10,0,笼式夹持,oprolinrichting,Spring Cage,Case à ressort,Federzug,Gabbia a molla,ケージクランプ,mola,Пружинный привод,Caja con muelle,Esnek Kafes,Przyłącz sprężynowy
+11,2,flanged connection,flensverbinding,flanged connection,raccord à brides,Flanschverbindung,connessione a flangia,フランジ接続,conexão flangeada,фланцевое соединение,conexión en pestaña,flanşlı bağlantı,Przyłącz kołnierzowy
+12,4,inside thread,binnendraad,inside thread,filetage intérieur,Innengewinde,filettatura interna,ネジ山内部,cadeia interna,внутренняя резьба,rosca interna,vida içinde,wewnętrzny gwint
+13,0,screwed axial,geschroefd axial,screwed axial,vissé axial,geschraubt axial,a vite assiale,ねじ留め軸,Eixo do parafuso,резьбовое аксиальное,eje atornillado,Eksenel vidalı,śrubowy osiowy
+14,0,CageClamp radiale,CageClamp radiaal,CageClamp radiale,CageClamp radial,CageClamp radial,CageClamp radiale,ケージクランプ（ラジアル）,Braçadeira Radial,CageClamp radiale,abrazadera radial,CageClamp radiale,CageClamp radialny
+15,0,绕接,hoek verbinding,Wire Wrap,Connexion enroulée,Wickelanschluss,Wire Wrap,ワイヤラップ,Revestimento do fio,монтаж проводов накруткой,recubrimiento de hilo,Tel sargı,Owinięcie przewodem
+16,0,HARAX,HARAX,HARAX,HARAX,HARAX,HARAX,HARAX,HARAX,HARAX,HARAX,HARAX,HARAX
+17,0,环形端子,ringkabelschoen,ring terminal,cosse de câble,Ringkabelschuh,ring terminal,ring terminal,Terminal olhal,ring terminal,borne en anillo,Halka klemens,zacisk pierścieniowy
+18,0,母端连接,vrouwelijke stekker,female connection,Connecteur femelle,Steckerbuchse,Presa connettore,メス接続,,Розетка,,dişi bağlantı,żeńskie połączenie
+19,0,公端连接,mannelijke stekker,male connection,Broche de connecteur,Steckerpin,Spina connettore,オス接続,,Вилка,,erkek bağlantı,męskie połączenie
+20,0,穿刺,gestekt,stuck,enfiché,gesteckt,Accoppiato,スタック,,Разъем,,bağlantılı,wtykany
+21,0,扁平连接,platte stekker,Flat plug-in,Connecteur plat ,Flachstecker,Faston,フラットプラグイン,,Плоский разъем,,yassı fişli,Płasko wtykany
+22,8,密封,draadafdichting,Wire seal,Étanchéité de fil ,Einzeladerabdichtung,Guarnizione filo,ワイヤシール,,Уплотнитель провода,,tel contası,Uszczelka przewodu
+23,0,,,Push In,,Einsteckverbindung,,,,,,,

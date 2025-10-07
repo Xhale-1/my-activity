@@ -1,0 +1,28 @@
+# Используем официальный образ Oracle Database 23ai Free
+# FROM container-registry.oracle.com/database/free:23.7.0.0-amd64
+FROM container-registry.oracle.com/database/free:latest
+
+# Базовые настройки (можно переопределить при docker run)
+ENV ORACLE_PDB=FREEPDB1 \
+    ORACLE_PWD=MyOracle123 \
+    ORACLE_CHARACTERSET=AL32UTF8
+
+# Копируем ваши скрипты
+# Важно: run_scripts.sh кладём в /opt/oracle/scripts/setup — он запустится один раз после создания БД
+COPY --chown=oracle:oinstall ./init_scripts/run_scripts.sh      /opt/oracle/scripts/startup/00-run_scripts.sh
+COPY --chown=oracle:oinstall ./init_scripts /opt/oracle/scripts/custom
+COPY --chown=oracle:oinstall ./init_db_data /opt/oracle/scripts/custom/data
+#COPY --chown=oracle:oinstall ./init_scripts/loader.ctl.template /opt/oracle/scripts/custom/loader.ctl.template
+
+COPY --chown=oracle:oinstall ./init_scripts/03-load-csv.sh /opt/oracle/scripts/custom/03-load-csv.sh
+
+USER root
+RUN chmod 755 /opt/oracle/scripts/custom/03-load-csv.sh
+USER oracle
+
+
+USER root
+# Права на выполнение
+RUN chmod 755 /opt/oracle/scripts/startup/00-run_scripts.sh
+USER oracle
+

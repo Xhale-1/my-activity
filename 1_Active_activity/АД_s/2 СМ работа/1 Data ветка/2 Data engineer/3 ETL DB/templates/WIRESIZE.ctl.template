@@ -1,0 +1,19 @@
+options (skip=1)
+
+-- Block for table: WIRESIZE
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/WIRESIZE.csv'
+badfile 'WIRESIZE.bad'
+discardfile 'WIRESIZE.dis'
+append
+into table "WIRESIZE"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "CROSSEC" CHAR(2000),
+  "MATID" INTEGER EXTERNAL,
+  "RESISTANCE" CHAR(2000),
+  "INNER_DIA" CHAR(2000),
+  "OUTER_DIA" CHAR(2000)
+)

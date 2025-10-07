@@ -1,0 +1,20 @@
+options (skip=1)
+
+-- Block for table: SymbolAttribute
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/SymbolAttribute.csv'
+badfile 'SymbolAttribute.bad'
+discardfile 'SymbolAttribute.dis'
+append
+into table "SymbolAttribute"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "ID" CHAR(40),
+  "ENTRY" CHAR(255),
+  "VERSION" CHAR(4),
+  "AttributeName" CHAR(80),
+  "Copy" INTEGER EXTERNAL,
+  "AttributeValue" CHAR(255)
+)

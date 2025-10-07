@@ -1,0 +1,17 @@
+options (skip=1)
+
+-- Block for table: Gate
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/Gate.csv'
+badfile 'Gate.bad'
+discardfile 'Gate.dis'
+append
+into table "Gate"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "ENTRY" CHAR(255),
+  "COPY" INTEGER EXTERNAL,
+  "CCTNAME" CHAR(255)
+)

@@ -1,0 +1,6 @@
+ID,ASSIGNED_LIST,READ_ONLY,LOWER,UPPER
+1,SheetMUPermission,True,,
+2,Additional Parts Connector DT Series,True,,
+3,DB_User,False,,
+4,PID_EMSR-Function,False,,
+5,Bus Types (PLC Topology),False,,

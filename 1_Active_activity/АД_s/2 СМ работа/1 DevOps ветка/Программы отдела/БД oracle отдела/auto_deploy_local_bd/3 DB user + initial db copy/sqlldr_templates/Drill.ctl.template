@@ -1,0 +1,21 @@
+options (skip=1)
+
+-- Block for table: Drill
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/Drill.csv'
+badfile 'Drill.bad'
+discardfile 'Drill.dis'
+append
+into table "Drill"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "EntryID" INTEGER EXTERNAL,
+  "Diameter" CHAR(2000),
+  "Tolerance" CHAR(2000),
+  "Unit" CHAR(20),
+  "Type" INTEGER EXTERNAL,
+  TData_HEX FILLER CHAR(8000000),
+  "TData" EXPRESSION "HEXTORAW(:TData_HEX)"
+)

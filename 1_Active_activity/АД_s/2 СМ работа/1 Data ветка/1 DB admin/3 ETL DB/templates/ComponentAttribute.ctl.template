@@ -1,0 +1,23 @@
+options (skip=1)
+
+-- Block for table: ComponentAttribute
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/ComponentAttribute.csv'
+badfile 'ComponentAttribute.bad'
+discardfile 'ComponentAttribute.dis'
+append
+into table "ComponentAttribute"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "ID" CHAR(40),
+  "ENTRY" CHAR(255),
+  "VERSION" CHAR(4),
+  "BundleID" INTEGER EXTERNAL,
+  "NODENO" INTEGER EXTERNAL,
+  "Flags" INTEGER EXTERNAL,
+  "AttributeName" CHAR(80),
+  "Copy" INTEGER EXTERNAL,
+  "AttributeValue" CHAR(255)
+)

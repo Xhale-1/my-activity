@@ -1,0 +1,28 @@
+options (skip=1)
+
+-- Block for table: ColumnDescription
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/ColumnDescription.csv'
+badfile 'ColumnDescription.bad'
+discardfile 'ColumnDescription.dis'
+append
+into table "ColumnDescription"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "TableName" CHAR(128),
+  "ColumnName" CHAR(128),
+  "English" CHAR(80),
+  "German" CHAR(80),
+  "French" CHAR(80),
+  "Chinese" CHAR(80),
+  "Dutch" CHAR(80),
+  "Italian" CHAR(80),
+  "Japanese" CHAR(80),
+  "Polski" CHAR(255),
+  "Portuguese" CHAR(80),
+  "Russian" CHAR(80),
+  "Spanish" CHAR(80),
+  "Turkish" CHAR(80)
+)

@@ -1,0 +1,18 @@
+options (skip=1)
+
+-- Block for table: FUNCTIONAL_UNITS
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/FUNCTIONAL_UNITS.csv'
+badfile 'FUNCTIONAL_UNITS.bad'
+discardfile 'FUNCTIONAL_UNITS.dis'
+append
+into table "FUNCTIONAL_UNITS"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "NAME" CHAR(255),
+  "ID" INTEGER EXTERNAL,
+  "SYMBOL" CHAR(255),
+  "TYPE" INTEGER EXTERNAL
+)

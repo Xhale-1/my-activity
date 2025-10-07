@@ -1,0 +1,29 @@
+options (skip=1)
+
+-- Block for table: SymbolGraphic
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/SymbolGraphic.csv'
+badfile 'SymbolGraphic.bad'
+discardfile 'SymbolGraphic.dis'
+append
+into table "SymbolGraphic"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "ENTRY" CHAR(255),
+  "COPY" INTEGER EXTERNAL,
+  "GraphicType" INTEGER EXTERNAL,
+  "Linecolor" INTEGER EXTERNAL,
+  "Linetype" INTEGER EXTERNAL,
+  "Linewidth" CHAR(2000),
+  "Fillmode" INTEGER EXTERNAL,
+  "Fillcolor" INTEGER EXTERNAL,
+  "HatchData" RAW,
+  GraphicData_HEX FILLER CHAR(8000000),
+  "GraphicData" EXPRESSION "HEXTORAW(:GraphicData_HEX)",
+  "GraphicLevel" INTEGER EXTERNAL,
+  "Flags" INTEGER EXTERNAL,
+  "ID" INTEGER EXTERNAL,
+  "STATE_ID" CHAR(36)
+)

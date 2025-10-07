@@ -1,0 +1,19 @@
+options (skip=1)
+
+-- Block for table: FUNCTIONAL_PORTS
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/FUNCTIONAL_PORTS.csv'
+badfile 'FUNCTIONAL_PORTS.bad'
+discardfile 'FUNCTIONAL_PORTS.dis'
+append
+into table "FUNCTIONAL_PORTS"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "NAME" CHAR(255),
+  "ID" INTEGER EXTERNAL,
+  "COPY" INTEGER EXTERNAL,
+  "PORT" CHAR(255),
+  "FLAGS" INTEGER EXTERNAL
+)

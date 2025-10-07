@@ -1,0 +1,16 @@
+options (skip=1)
+
+-- Block for table: DatabaseInfo
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/DatabaseInfo.csv'
+badfile 'DatabaseInfo.bad'
+discardfile 'DatabaseInfo.dis'
+append
+into table "DatabaseInfo"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "Version" CHAR(10),
+  "Description" CHAR(255)
+)

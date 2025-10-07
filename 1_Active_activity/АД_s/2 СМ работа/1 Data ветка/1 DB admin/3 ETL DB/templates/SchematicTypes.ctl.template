@@ -1,0 +1,33 @@
+options (skip=1)
+
+-- Block for table: SchematicTypes
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/SchematicTypes.csv'
+badfile 'SchematicTypes.bad'
+discardfile 'SchematicTypes.dis'
+append
+into table "SchematicTypes"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "Type" INTEGER EXTERNAL,
+  IconUnplaced_HEX FILLER CHAR(8000000),
+  "IconUnplaced" EXPRESSION "HEXTORAW(:IconUnplaced_HEX)",
+  IconPlaced_HEX FILLER CHAR(8000000),
+  "IconPlaced" EXPRESSION "HEXTORAW(:IconPlaced_HEX)",
+  IconInactive_HEX FILLER CHAR(8000000),
+  "IconInactive" EXPRESSION "HEXTORAW(:IconInactive_HEX)",
+  "DESCRIPTION_86" CHAR(255),
+  "DESCRIPTION_31" CHAR(255),
+  "DESCRIPTION_44" CHAR(255),
+  "DESCRIPTION_33" CHAR(255),
+  "DESCRIPTION_49" CHAR(255),
+  "DESCRIPTION_39" CHAR(255),
+  "DESCRIPTION_81" CHAR(255),
+  "DESCRIPTION_351" CHAR(255),
+  "DESCRIPTION_07" CHAR(255),
+  "DESCRIPTION_34" CHAR(255),
+  "DESCRIPTION_90" CHAR(255),
+  "DESCRIPTION_48" CHAR(255)
+)

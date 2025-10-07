@@ -1,0 +1,31 @@
+options (skip=1)
+
+-- Block for table: WIREKIND
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/WIREKIND.csv'
+badfile 'WIREKIND.bad'
+discardfile 'WIREKIND.dis'
+append
+into table "WIREKIND"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "ID" INTEGER EXTERNAL,
+  "MATID1" INTEGER EXTERNAL,
+  "MATID2" INTEGER EXTERNAL,
+  "ALLOW_TEMP" CHAR(2000),
+  "MELTING_TEMP" CHAR(2000),
+  "DESCRIPTION_86" CHAR(255),
+  "DESCRIPTION_31" CHAR(255),
+  "DESCRIPTION_44" CHAR(255),
+  "DESCRIPTION_33" CHAR(255),
+  "DESCRIPTION_49" CHAR(255),
+  "DESCRIPTION_39" CHAR(255),
+  "DESCRIPTION_81" CHAR(255),
+  "DESCRIPTION_351" CHAR(255),
+  "DESCRIPTION_07" CHAR(255),
+  "DESCRIPTION_34" CHAR(255),
+  "DESCRIPTION_90" CHAR(255),
+  "DESCRIPTION_48" CHAR(255)
+)

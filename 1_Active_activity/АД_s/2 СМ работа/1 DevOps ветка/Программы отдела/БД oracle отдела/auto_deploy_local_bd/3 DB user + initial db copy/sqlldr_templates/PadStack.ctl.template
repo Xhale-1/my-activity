@@ -1,0 +1,18 @@
+options (skip=1)
+
+-- Block for table: PadStack
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/PadStack.csv'
+badfile 'PadStack.bad'
+discardfile 'PadStack.dis'
+append
+into table "PadStack"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "EntryID" INTEGER EXTERNAL,
+  "PadSym" CHAR(20),
+  "LayerID" INTEGER EXTERNAL,
+  "Flags" INTEGER EXTERNAL
+)

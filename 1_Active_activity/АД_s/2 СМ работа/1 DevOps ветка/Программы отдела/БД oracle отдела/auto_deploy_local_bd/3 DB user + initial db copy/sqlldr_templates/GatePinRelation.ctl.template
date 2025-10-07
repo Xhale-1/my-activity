@@ -1,0 +1,19 @@
+options (skip=1)
+
+-- Block for table: GatePinRelation
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/GatePinRelation.csv'
+badfile 'GatePinRelation.bad'
+discardfile 'GatePinRelation.dis'
+append
+into table "GatePinRelation"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "ENTRY" CHAR(255),
+  "GateNumber" INTEGER EXTERNAL,
+  "PinNumber" INTEGER EXTERNAL,
+  "Representation" INTEGER EXTERNAL,
+  "NodeNumber" INTEGER EXTERNAL
+)

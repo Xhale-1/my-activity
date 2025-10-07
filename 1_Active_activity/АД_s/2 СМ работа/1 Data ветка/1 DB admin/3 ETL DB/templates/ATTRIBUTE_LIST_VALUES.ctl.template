@@ -1,0 +1,17 @@
+options (skip=1)
+
+-- Block for table: ATTRIBUTE_LIST_VALUES
+LOAD DATA
+CHARACTERSET AL32UTF8
+infile '/opt/oracle/scripts/custom/data/ATTRIBUTE_LIST_VALUES.csv'
+badfile 'ATTRIBUTE_LIST_VALUES.bad'
+discardfile 'ATTRIBUTE_LIST_VALUES.dis'
+append
+into table "ATTRIBUTE_LIST_VALUES"
+fields terminated by ',' optionally enclosed by '"'
+trailing nullcols
+(
+  "ID" INTEGER EXTERNAL,
+  "COPY" INTEGER EXTERNAL,
+  "VALUE" CHAR(255)
+)

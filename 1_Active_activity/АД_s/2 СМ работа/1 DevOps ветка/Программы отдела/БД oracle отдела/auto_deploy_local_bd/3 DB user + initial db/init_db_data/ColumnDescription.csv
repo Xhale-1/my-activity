@@ -1,0 +1,23 @@
+Chinese (Simplified),ColumnName,Dutch,English,French,German,Italian,Russian,Spanish,TableName,Turkish,Portuguese,Japanese,Polski
+商品编号,ArticleNumber,artikelnummer,Article number,Numéro d'article,Artikelnummer,Numero articolo,Номер по каталогу,Nº del artículo,ComponentData,Ürün numarası,Número de artigo,商品番号,Numer artykułu
+分类,Class,klasse,Class,Classe,Klasse,Classe,Класс,Clase,ComponentData,Klas,Classe,クラス,Klasa
+主分类,Class-main,hoofdklasse,Main Class,Classe principale,Hauptklasse,Classe principale,Основной класс,Clase principal,ComponentData,Ana Klas,Classe Principal,メインクラス,Główna klasa
+日期,DATEMAIN,datum,Date,Date,Datum,Data,Дата создания,Fecha,ComponentData,Tarih,Data,日付,Data
+描述,Description,beschrijving,Description,Description,Beschreibung,Descrizione,Наименование,Descripción,ComponentData,Açıklama,Descrição,表記,Opis
+设备字母编码,DeviceLetterCode,identificatie code,Device letter code,Code alphab. d'appareil,Kennbuchstabe,Lettera identificativa,Код изделия,Código letra dispositivo,ComponentData,Cihaz harf kodu,Identificador único de dispositivo,デバイス文字コード,Kod literowy
+元件名称,ENTRY,component naam,Component name,Nom de composant,Bauteilname,Nome componente,Имя изделия,Nombre del componente,ComponentData,Bileşen adı,Nome de componente,コンポーネント名,DaneKomponentu
+Component type,ENTRYTYP,component type,Component type,Type de composant,Bauteiltyp,Tipo componente,Тип изделия в БД,Tipo de componente,ComponentData,Bileşen tipi,Component type,Component type,Typ komponentu
+Modification date,LASTUPDT,modificatie datum,Modification date,Date de modification,Änderungsdatum,Dato di modificazione,Дата изменения,Fecha de modificación,ComponentData,Değişiklik tarihi,Modification date,Modification date,Data modyfikacji
+供应商,Supplier,producent,Supplier,Fournisseur,Hersteller,Produttore,Поставщик,Proveedor,ComponentData,Üretici,Fornecedor,サプライヤ,Dostawca
+版本,VERSION,versie,Version,Version,Version,Versione,Версия,Versión,ComponentData,Sürüm,Versão,バージョン,Wersja
+版本文本,VersionText,versietekst,Version text,Texte de version,Versionstext,Testo versione,Надпись версии,Texto de versión,ComponentData,Sürüm metin,Texto de versão,バージョンテキスト,Tekst wersji
+分类,Class,klasse,Class,Classe,Klasse,Classe,Класс,Clase,ModelData,Klas,Classe,クラス,Klasa
+描述,Description,beschrijving,Description,Description,Beschreibung,Descrizione,Наименование,Descripción,ModelData,Açıklama,Descrição,表記,Opis
+分类,Class,klasse,Class,Classe,Klasse,Classe,Класс,Clase,SymbolData,Klas,Classe,クラス,Klasa
+日期,DATEMAIN,datum,Date,Date,Datum,Data,Дата,Fecha,SymbolData,Tarih,Data,日付,Data
+描述,Description,beschrijving,Description,Description,Beschreibung,Descrizione,Наименование,Descripción,SymbolData,Açıklama,Descrição,表記,Opis 
+符号名称,ENTRY,symboolnaam,Symbol name,Nom de symbole,Symbolname,Nome simbolo,Имя символа,Nombre del símbolo,SymbolData,Sembol adı,Nome de Símbolo,シンボル名,DaneSymbolu
+标准,Norm,norm,Standard,Norme,Norm,Normativa,Стандарт,Norma,SymbolData,Standart,Norma,標準,Norma
+版本,VERSION,versie,Version,Version,Version,Versione,Версия,Versión,SymbolData,Sürüm,Versão,バージョン,Wersja
+版本文本,VersionText,versietekst,Version text,Texte de version,Versionstext,Testo versione,Надпись версии,Texto de versión,SymbolData,Sürüm metin,Texto de versão,バージョンテキスト,Tekst wersji
+模型名称,ENTRY,model naam,Model name,Nom de modèle,Bauformname,Nome modello,Имя модели,,ModelData,Model adı,,モデルデータ名,DaneModelu

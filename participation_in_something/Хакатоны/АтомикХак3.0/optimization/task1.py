@@ -59,7 +59,9 @@ df['total_cost'] = cost_DGU * df['P_DGU'] + [
 ]
 
 print(df)
+print(df['P_DGU'].sum()*cost_DGU + df['P_grid'].iloc[:7].sum()*cost_grid_0_6 + df['P_grid'].iloc[7:].sum()*cost_grid_7_23)
 
 df_answer = df[['time','P_DGU','P_grid']]
 df_answer.to_csv("./optimize_task1.csv", sep=';', decimal='.', index=False)
-
+# print(df[['time', 'P_load', 'P_solar', 'P_DGU', 'P_grid', 'total_cost']])
+# print("Total cost =", df['total_cost'].sum())

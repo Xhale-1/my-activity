@@ -100,6 +100,7 @@ df['total_cost'] = cost_DGU * df['P_DGU'] + [
 ]
 
 print(df)
+print(df[])
 
 df_answer = df[['time','P_DGU','P_grid']]
 df_answer.to_csv("./optimize_task1.csv", sep=';', decimal='.', index=False)
